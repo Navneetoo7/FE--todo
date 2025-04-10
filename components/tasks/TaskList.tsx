@@ -64,10 +64,10 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
               <p className="text-sm text-gray-600">{task.description}</p>
               <div className="flex items-center gap-2 mt-2">
                 <Badge variant={getPriorityVariant(task.priority)}>
-                  {task.priority}
+                  {formatPriority(task.priority)}
                 </Badge>
                 <Badge variant={getStatusVariant(task.status)}>
-                  {task.status}
+                  {formatStatus(task.status)}
                 </Badge>
                 <span className="text-sm text-gray-500">
                   Due: {format(new Date(task.deadline), "MMM dd, yyyy")}
@@ -82,9 +82,9 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem
-                  onClick={() => handleStatusChange(task.id, TaskStatus.IN_PROGRESS)}
+                  onClick={() => handleStatusChange(task.id, TaskStatus.UNDER_PROCESS)}
                 >
-                  Mark In Progress
+                  Mark Under Process
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleStatusChange(task.id, TaskStatus.COMPLETED)}
@@ -110,7 +110,7 @@ function getStatusVariant(status: TaskStatus) {
   switch (status) {
     case TaskStatus.PENDING:
       return "secondary"
-    case TaskStatus.IN_PROGRESS:
+    case TaskStatus.UNDER_PROCESS:
       return "default"
     case TaskStatus.COMPLETED:
       return "success"
@@ -129,5 +129,31 @@ function getPriorityVariant(priority: TaskPriority) {
       return "default"
     default:
       return "outline"
+  }
+}
+
+function formatStatus(status: TaskStatus): string {
+  switch (status) {
+    case TaskStatus.PENDING:
+      return "Pending"
+    case TaskStatus.UNDER_PROCESS:
+      return "Under Process"
+    case TaskStatus.COMPLETED:
+      return "Completed"
+    default:
+      return status
+  }
+}
+
+function formatPriority(priority: TaskPriority): string {
+  switch (priority) {
+    case TaskPriority.LOW:
+      return "Low"
+    case TaskPriority.MEDIUM:
+      return "Medium"
+    case TaskPriority.HIGH:
+      return "High"
+    default:
+      return priority
   }
 }

@@ -10,7 +10,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { useState } from "react"
 import { registerUser } from "@/lib/api"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Gender } from "@/app/enums/gender.enum"
+import { Gender } from "@/app/enums"
 import { User, Mail, Phone, Lock, Loader2 } from "lucide-react"
 
 export function SignupForm() {
