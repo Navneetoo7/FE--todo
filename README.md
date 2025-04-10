@@ -1,10 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js Project
+This is a Next.js project bootstrapped with create-next-app.
 
-## Getting Started
+Features
+Authentication: Login and Signup functionality.
 
-First, run the development server:
+Task Management: Create, delete, and update task status.
 
-```bash
+User Interceptor: Middleware to handle user-specific logic.
+
+UI Framework: Built with Tailwind CSS and Shadcn UI for a modern design system.
+
+Validation: Zod for schema-based validation.
+
+Getting Started
+Run the Development Server
+Start the development server using your preferred package manager:
+
+bash
 npm run dev
 # or
 yarn dev
@@ -12,25 +24,85 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+Open http://localhost:3000 in your browser to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edit Pages
+You can start editing the application by modifying app/page.tsx. Changes will auto-update in development mode.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Technologies Used
+Framework
+Next.js: React-based framework for building web applications.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+UI
+Tailwind CSS: Utility-first CSS framework.
 
-## Learn More
+Shadcn UI: Component library built on Tailwind CSS.
 
-To learn more about Next.js, take a look at the following resources:
+Validation
+Zod: TypeScript-first schema validation library.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Authentication
+Custom login and signup components integrated with API routes for user management.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Task Management
+API routes for task creation, deletion, and status updates.
 
-## Deploy on Vercel
+Learn More
+To learn more about Next.js and its features, check out the following resources:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js Documentation - Learn about Next.js features and APIs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Learn Next.js - Interactive tutorial for Next.js.
+
+Deployment
+The easiest way to deploy your Next.js app is through the Vercel Platform. Follow the Next.js deployment documentation for more details.
+
+Installation Instructions
+Clone the repository:
+
+bash
+git clone <repository-url>
+cd <repository-folder>
+Install dependencies:
+
+bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+Set up environment variables:
+
+Create a .env.local file in the root directory.
+
+Add required variables (e.g., database connection strings, API keys).
+
+Start the development server:
+
+bash
+npm run dev
+API Routes
+Authentication
+POST /api/auth/signup: Register a new user.
+
+POST /api/auth/login: Authenticate an existing user.
+
+Tasks
+POST /api/tasks: Create a new task.
+
+DELETE /api/tasks/:id: Delete a task by ID.
+
+PATCH /api/tasks/:id: Update task status by ID.
+
+Contributing
+We welcome contributions! Please follow these steps:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature-name).
+
+Make your changes and commit (git commit -m "Add feature-name").
+
+Push to your branch (git push origin feature-name).
+
+Open a pull request.

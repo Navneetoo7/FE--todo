@@ -27,8 +27,10 @@ export function LoginForm() {
   const onSubmit = async (values: { email: string; password: string }) => {
     try {
       setIsLoading(true)
-      const { token } = await loginUser(values)
-      localStorage.setItem("token", token)
+      const { access_token } = await loginUser(values)
+      
+      // Log the token to the terminal
+      localStorage.setItem("token", access_token)
       router.push("/dashboard")
       toast({
         title: "Success",

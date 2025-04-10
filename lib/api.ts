@@ -1,3 +1,4 @@
+import { CreateTaskDto, UpdateTaskStatusDto } from "@/types/task";
 import axios from "axios";
 
 const clientApi = axios.create({
@@ -30,7 +31,7 @@ if (typeof window !== "undefined") {
 
 export const loginUser = async (credentials: { email: string; password: string }) => {
   const response = await clientApi.post("/auth/login", credentials);
-  return response.data;
+  return response.data.data;
 };
 
 export const registerUser = async (userData: {
@@ -42,31 +43,38 @@ export const registerUser = async (userData: {
   password: string;
 }) => {
   const response = await clientApi.post("/auth/signup", userData);
-  console.log(response.data)
-  return response.data;
+  return response.data.data;
 };
 
-export const getTasks = async () => {
-  const response = await clientApi.get("/tasks", {
-    params: { page: 1, limit: 100 } 
-  })
-  return response.data
-}
+// Add interceptors for auth tokens if needed
+clientApi.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export const getTasks = async (page = 1, limit = 10) => {
+  const response = await clientApi.get('/tasks', {
+    params: { page, limit },
+  });
+  return response.data.data;
+};
 
 export const createTask = async (taskData: CreateTaskDto) => {
-  const response = await clientApi.post("/tasks", taskData)
-  return response.data
-}
+  const response = await clientApi.post('/tasks', taskData);
+  return response.data.data;
+};
 
 export const updateTaskStatus = async (taskId: string, statusData: UpdateTaskStatusDto) => {
-  const response = await clientApi.patch(`/tasks/${taskId}/status`, statusData)
-  return response.data
-}
+  const response = await clientApi.patch(`/tasks/${taskId}/status`, statusData);
+  return response.data.data;
+};
 
 export const deleteTask = async (taskId: string) => {
-  const response = await clientApi.delete(`/tasks/${taskId}`)
-  return response.data
-}
-
+  const response = await clientApi.delete(`/tasks/${taskId}`);
+  return response.data.data;
+};
 
 export default clientApi;

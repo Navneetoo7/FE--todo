@@ -31,7 +31,7 @@ export function SignupForm() {
     },
   })
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values:any) => {
     try {
       setIsLoading(true)
       await registerUser(values)
@@ -39,11 +39,11 @@ export function SignupForm() {
         title: "Success",
         description: "Account created successfully!",
       })
-      router.push("/login")
+      router.push("/")
     } catch (error) {
       toast({
         title: "Error",
-        description: error.message || "Signup failed",
+        description: error?.message || "Signup failed",
         variant: "destructive",
       })
     } finally {
