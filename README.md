@@ -1,4 +1,4 @@
-<img width="1680" alt="Screenshot 2025-04-11 at 10 00 16 AM" src="https://github.com/user-attachments/assets/ecf2820b-dd79-43f3-b8b9-13373b3a39a1" />Next.js Project
+Next.js Project
 This is a Next.js project bootstrapped with create-next-app.
 
 Features
