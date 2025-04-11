@@ -12,7 +12,17 @@ UI Framework: Built with Tailwind CSS and Shadcn UI for a modern design system.
 
 Validation: Zod for schema-based validation.
 
+UI view
 
+<img width="1663" alt="Screenshot 2025-04-11 at 12 16 44 PM" src="https://github.com/user-attachments/assets/bf74db88-07d9-436d-944d-55e1e40a426a" />
+
+<img width="1664" alt="Screenshot 2025-04-11 at 12 16 24 PM" src="https://github.com/user-attachments/assets/7b2b43fb-256d-43f8-b934-2d899b4b21ef" />
+
+<img width="1263" alt="Screenshot 2025-04-11 at 12 23 03 PM" src="https://github.com/user-attachments/assets/c990a572-941c-4ea9-858a-ccc13d8c1ebb" />
+
+<img width="1203" alt="Screenshot 2025-04-11 at 12 17 50 PM" src="https://github.com/user-attachments/assets/274d9ea0-b77c-481a-9e55-d7065d09b479" />
+
+<img width="1172" alt="Screenshot 2025-04-11 at 12 17 16 PM" src="https://github.com/user-attachments/assets/2963af69-e7c6-4039-bfcb-6e14365520d0" />
 
 
 Getting Started
