@@ -1,4 +1,4 @@
-Next.js Project
+<img width="1680" alt="Screenshot 2025-04-11 at 10 00 16 AM" src="https://github.com/user-attachments/assets/ecf2820b-dd79-43f3-b8b9-13373b3a39a1" />Next.js Project
 This is a Next.js project bootstrapped with create-next-app.
 
 Features
@@ -11,6 +11,18 @@ User Interceptor: Middleware to handle user-specific logic.
 UI Framework: Built with Tailwind CSS and Shadcn UI for a modern design system.
 
 Validation: Zod for schema-based validation.
+
+<img width="1680" alt="Screenshot 2025-04-11 at 10 00 26 AM" src="https://github.com/user-attachments/assets/15b0658e-9bfc-4451-b4ae-f1b1841b56d1" />
+
+
+<img width="1680" alt="Screenshot 2025-04-11 at 10 00 30 AM" src="https://github.com/user-attachments/assets/28ef5b7d-3518-4d5b-a3be-dc528d03adfb" />
+
+<img width="1680" alt="Screenshot 2025-04-11 at 9 59 30 AM" src="https://github.com/user-attachments/assets/6b1cdaf2-577f-4029-a5e1-de2432d2782d" />
+
+<img width="1680" alt="Screenshot 2025-04-11 at 10 00 13 AM" src="https://github.com/user-attachments/assets/2ee08472-c280-40ae-97e5-ae5c6f049fd9" />
+
+<img width="1680" alt="Screenshot 2025-04-11 at 10 00 16 AM" src="https://github.com/user-attachments/assets/7dc19c6e-a7aa-434d-a04b-65ec0514b861" />
+
 
 Getting Started
 Run the Development Server
